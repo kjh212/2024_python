@@ -26,7 +26,6 @@ elif menu ==4:
     n2 = int(numbers[1])
     if n1 > n2:
         n1, n2 = n2, n1
-
     for number in range(n1, n2 + 1):
         is_prime = True
 

@@ -1,15 +1,18 @@
-number=int(input("input number : "))
-is_prime = True #int->book
-if number <2:
-    print(f'{number} is not prime')
-else:
-    i=2
-    while i<number:
-        if number % i == 0:
-            is_prime = False
-            break
-        i+=1
-    if is_prime :
-        print(f'{number} is prime number')
+numbers = input("input first second number : ").split()
+n1= int(numbers[0])
+n2= int(numbers[1])
+if n1>n2:
+    n1, n2= n2, n1
+
+for number in range (n1,n2+1):
+    is_prime=True
+
+    if number<2:
+        pass
     else:
-        print(f'{number} is not prime')
+        for i in range (2,number):
+            if number % i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            print (number, end=' ')

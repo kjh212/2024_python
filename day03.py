@@ -1,9 +1,18 @@
-setup= 'A duck goes into a bar...'
-print(setup.capitalize()) #처음 대문자
-print(setup.title()) #단어앞 전부 대문자
-print(setup.upper()) #전부 대문자
-print(setup.lower()) #전부 소문자
-print(setup.swapcase()) #대문자는 소문자 소문자는 대문자
-print(setup.center(30)) #중앙정렬
-print(setup.ljust(30)) #왼쪽정렬
-print(setup.rjust(30)) #오른쪽정렬
+numbers = input("input first second number : ").split()
+n1= int(numbers[0])
+n2= int(numbers[1])
+if n1>n2:
+    n1, n2= n2, n1
+
+for number in range (n1,n2+1):
+    is_prime=True
+
+    if number<2:
+        pass
+    else:
+        for i in range (2,number):
+            if number % i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            print (number, end=' ')

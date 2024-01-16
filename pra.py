@@ -1,12 +1,29 @@
-a=int(input("Input the first number :"))
-b=int(input("Input the second number :"))
-number=int(3)
-for number in range (a,b):
-    natural = int(2)
-    while natural <= (number-1):
-        if number % natural == 0:
-            break
-        natural+=1
-    else:
-        print(f'{number} is prime')
+#6.1
+y=[x for x in range (3,-1,-1)]
+print(y)
+
+#6.2
+guess_me=7
+number=1
+
+while number<=guess_me+1:
+    if number<guess_me:
+        print(f'{number} too low')
+    elif number==guess_me:
+        print('found it!')
+    elif number>guess_me:
+        print('oops')
+        break
     number+=1
+
+#6.3
+guess_me=5
+for number in range (10):
+    if number<guess_me:
+        print(f'{number} too low')
+    elif number==guess_me:
+        print('found it!')
+    elif number>guess_me:
+        print('oops')
+
+

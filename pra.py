@@ -5,7 +5,6 @@ print(y)
 #6.2
 guess_me=7
 number=1
-
 while number<=guess_me+1:
     if number<guess_me:
         print(f'{number} too low')

@@ -1,15 +1,11 @@
-subjects={'python' : 'kim', 'c++':'sung', 'database':'kang','data structure':'kim'}
-print("{0[c++]} {0[data structure]}".format(subjects))
-
-thing='wraith'
-place='window'
-print(('the {} is at the {}').format(thing,place))
-    #the wraith is at the window
-print(('the {:10s} is at the {:10s}').format(thing,place))
-    #the wraith     is at the window
-print(('the {:<10s} is at the {:<10s}').format(thing,place))
-    #the wraith     is at the window
-print(('the {:^10s} is at the {:^10s}').format(thing,place))
-    #the   wraith   is at the   window
-print(('the {:!^10s} is at the {:#^10s}').format(thing,place))
-    #the !!wraith!! is at the ##window##
+number=int(input("input number : "))
+cnt = 0
+i=1
+while i<=number:
+    if number % i == 0:
+        cnt = cnt +1
+    i+=1
+if cnt == 2:
+    print(f'{number} is prime number')
+else:
+    print(f'{number} is not prime')

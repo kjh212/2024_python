@@ -1,6 +1,9 @@
-university="inha\nuniversitiy"
-#university=r"inha\nuniversitiy"
-print(university)
-number1 = input("First number : ")
-number2 = input("second number : ")
-print(number1+number2)
+name = 'hennyabcde'
+print(name)
+print(name.replace('h','p'))
+print('p'+name[1:])
+print(name[0:5:2])
+print(name[-4:-1])
+print(len(name))
+print(name[1:len(name)])
+print(name[1:10:2])

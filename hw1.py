@@ -2,7 +2,7 @@ menu = int(input("1) Fahrenheit -> Celsius   2) Celsius -> Fahrenheit   3) Quit 
 
 while menu <= 3:
     if menu == 1:
-        fahrenheit = float(input('Input Fahrenheit : '))
+        fahrenheit = float(input('Input 1 Fahrenheit : '))
         print(f'Fahrenheit : {fahrenheit}F, Celsius : {((fahrenheit-32.0)*5.0/9.0):.4f}C')
         menu+=1
     elif menu == 2:

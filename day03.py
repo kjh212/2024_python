@@ -1,11 +1,12 @@
 number=int(input("input number : "))
-cnt = 0
-i=1
-while i<=number:
+is_prime = True
+i=2
+while i<number:
     if number % i == 0:
-        cnt = cnt +1
+        is_prime = False
+        break
     i+=1
-if cnt == 2:
+if is_prime :
     print(f'{number} is prime number')
 else:
     print(f'{number} is not prime')

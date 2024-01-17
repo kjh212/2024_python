@@ -4,7 +4,7 @@ ss=['123','234','2355']
 print('/'.join(ss))
 string='123123/23434/345345'
 print(string.split('/'))
-data=[2,4,3,1,5,10,9]
+data=[2,4,3,1,5,10,9,6]
 data.sort()
 print(data)
 data.reverse()

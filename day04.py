@@ -32,10 +32,13 @@ elif menu ==4:
         if number < 2:
             pass
         else:
-            for i in range(2, number): #중복코드
+            i = 2
+            while i*i <= number:
                 if number % i == 0:    #
                     is_prime = False   #
-                    break              #
+                    break
+                i=i+1#
+                print(i,end=' ')
             if is_prime:
                 print(number, end=' ')
 else:

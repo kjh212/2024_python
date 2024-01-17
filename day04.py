@@ -1,45 +1,29 @@
-menu = int(input("1) Fahrenheit -> Celsius 2) Celsius -> Fahrenheit\n3) find prime            4) find prime in range\n : "))
+t1=(5) #','가없어서 튜플 x
+t2=5,
+t3=(5,)
+t4=(5,7)
+t5=5,7 #굳이 소괄호 안쳐도 튜플
+print(type(t1),type(t2),type(t3),type(t4),type(t5))
+t6= "python","kim" #packing
+print(type(t6),t6[1])
+subject, prof = t6
+print(prof) # kim 이 나옴, subject 는 python
+#a,b,c = t6 #error (2개면 2개로 받아야됨, 2개인데 3개로 받으면 에러)
+t7 = () # 비어있으면 콤마 없어도 튜플
+t8 = tuple() # 튜플로 변환
 
-if menu == 1:
-    fahrenheit = float(input('Input 1 Fahrenheit : '))
-    print(f'Fahrenheit : {fahrenheit}F, Celsius : {((fahrenheit-32.0)*5.0/9.0):.4f}C')
+type('asdf',) #string
+type(('asdf',)) #tuple
+print(type(prof)) #unpacking 하면 str
 
-elif menu == 2:
-    celsius = float(input('Input Celcius : '))
-    print(f'Celsius : {celsius}C, Fahrenheit : {((celsius*9.0/5.0)+32.0):.4f}F')
-elif menu ==3:
-    number = int(input("input number : "))
-    is_prime = True
-    i = 2
-    while i < number:
-        if number % i == 0:   #중복코드
-            is_prime = False  #
-            break             #
-        i += 1                #
-        if is_prime:
-            print(f'{number} is prime number')
-        else:
-            print(f'{number} is not prime')
-elif menu ==4:
-    numbers = input("input first second number : ").split()
-    n1 = int(numbers[0]) #간소화
-    n2 = int(numbers[1]) #
-    if n1 > n2:          #
-        n1, n2 = n2, n1  #
-    for number in range(n1, n2 + 1):
-        is_prime = True
+# tuple 연상
+print(('ta',)+('ka',)) # ('ta','ka')
+print(('ta',)*3) # ('ta','ta','ta')
 
-        if number < 2:
-            pass
-        else:
-            i = 2
-            while i*i <= number:
-                if number % i == 0:    #
-                    is_prime = False   #
-                    break
-                i=i+1#
-                print(i,end=' ')
-            if is_prime:
-                print(number, end=' ')
-else:
-    print("quit program")
+#a=(7,2), b=(7,2,9), a<=b
+
+t11= 4.43,
+t12= 3.97, 4.1, 3.27
+print(id(t11))
+t11+=t12
+print(id(t11))

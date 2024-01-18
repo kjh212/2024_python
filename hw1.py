@@ -9,14 +9,7 @@ elif menu == 2:
     print(f'Celsius : {celsius}C, Fahrenheit : {((celsius*9.0/5.0)+32.0):.4f}F')
 elif menu ==3:
     number = int(input("input number : "))
-    is_prime = True
-    i = 2
-    while i < number:
-        if number % i == 0:   #중복코드
-            is_prime = False  #
-            break             #
-        i += 1                #
-        if is_prime:
+        if isprime(number):
             print(f'{number} is prime number')
         else:
             print(f'{number} is not prime')

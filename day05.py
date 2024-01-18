@@ -1,9 +1,13 @@
-def squares(n):
-    return n*n
+def my_range(first=0,last=10,step=1):
+    number=first
+    while number<last:
+        yield number
+        number +=step
 
-even_numbers=[i for i in range(101) if i % 2==0]
-print(even_numbers)
-print(tuple(map(lambda x:x**2, even_numbers)))# = print(tuple(map(squares, even_numbers)))
-z=lambda x:pow(x,2)
-print(tuple(map(z, even_numbers))) #맵 뒤에 함수가 아닌 저런 대체함수도 가능
-print(type(z)) # funtion
+r=my_range()
+print(r,type(r))
+
+for x in r:
+    print(x)
+for x in r:
+    print(x) #두번째 출력할 때 안나옴

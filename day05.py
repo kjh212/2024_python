@@ -1,16 +1,8 @@
 # closure
-def out_func(nout):
-    def inner_func():
-        return nout * nout
-    return inner_func
-x = out_func(9)
-print(type(x))
-print(x)
-print(x())
-# inner function
-# def out_func(nout):
-#     def inner_func(nin):
-#         return nin * nin
-#     return inner_func(nout)
-#
-# print(out_func(5))
+numbers = ["7", "-11", "3"]
+print(sum(map(int, numbers)))
+# numbers = ["7", "-11", "3"]
+# hap = 0
+# for number in numbers:
+#     hap = hap + int(number)
+# print(hap)

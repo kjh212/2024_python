@@ -32,13 +32,17 @@ class Pikachu(Pokemon):
                 input('')
             elif attackinput==3:
                 break
+            else:
+                print('다시 선택하십쇼.')
+                input('')
 
             if enemy.HP > 0:
                 print(f'남은 체력은 {enemy.HP}이다. ')
             elif enemy.HP <= 0:
                 print(f'{enemy.name}을 물리쳤다!!!')
                 input('')
-        startpokemon.activity(Pikachu)
+        your_poke = Pikachu()
+        startpokemon.activity(your_poke)
 
 
 
@@ -69,13 +73,17 @@ class Charmander(Pokemon):
                 input('')
             elif attackinput == 3:
                 break
+            else:
+                print('다시 선택하십쇼.')
+                input('')
 
             if enemy.HP > 0:
                 print(f'남은 체력은 {enemy.HP}이다. ')
             elif enemy.HP <= 0:
                 print(f'{enemy.name}을(를) 물리쳤다!!!')
                 input('')
-        startpokemon.activity(Charmander)
+        your_poke = Charmander()
+        startpokemon.activity(your_poke)
 class Squirtle(Pokemon):
     def __init__(self):
         super().__init__('꼬부기','물속성',11)
@@ -101,13 +109,17 @@ class Squirtle(Pokemon):
                 input('')
             elif attackinput == 3:
                 break
+            else:
+                print('다시 선택하십쇼.')
+                input('')
 
             if enemy.HP > 0:
                 print(f'남은 체력은 {enemy.HP}이다. ')
             elif enemy.HP <= 0:
                 print(f'{enemy.name}을 물리쳤다!!!')
                 input('')
-        startpokemon.activity(Squirtle)
+        your_poke=Squirtle()
+        startpokemon.activity(your_poke)
 
 class firemon(Pokemon):
     def __init__(self):

@@ -161,27 +161,28 @@ class pokemon:
         pokemon_who = ['피카츄', '파이리', '꼬부기']
         while True:
             num = input('1:피카츄\n2:파이리\n3:꼬부기\n-->')
-            int2=int(num)
-            if num!='1' and num!='2' and num!='3':
+            if num=='1' or num=='2' or num=='3':
+                int2 = int(num)
+                print(f'{pokemon_who[int2-1]}을 선택하시겠습니까?')
+                answer1 = input("1.예\n2.아니오\n-->")
+                if answer1 == "1":
+                    print(f'{pokemon_who[int2-1]}를 선택하셨습니다.(enter)')
+                    if num=='1':
+                        your_pokemon=Pikachu()
+                    elif num=='2':
+                        your_pokemon=Charmander()
+                    elif num=='3':
+                        your_pokemon=Squirtle()
+                    input('')
+                    print(f'{pokemon_who[int2-1]}와 함께 무엇을 하실 것인가요?')
+                    startpokemon.activity(your_pokemon)
+                    break
+                else:
+                    print('다시 선택하십쇼.')
+                    input('')
+                    continue
+            else :
                 print('다시 선택하십쇼.(enter)')
-                input('')
-                continue
-            print(f'{pokemon_who[int2-1]}을 선택하시겠습니까?')
-            answer1 = input("1.예\n2.아니오\n-->")
-            if answer1 == "1":
-                print(f'{pokemon_who[int2-1]}를 선택하셨습니다.(enter)')
-                if num=='1':
-                    your_pokemon=Pikachu()
-                elif num=='2':
-                    your_pokemon=Charmander()
-                elif num=='3':
-                    your_pokemon=Squirtle()
-                input('')
-                print(f'{pokemon_who[int2-1]}와 함께 무엇을 하실 것인가요?')
-                startpokemon.activity(your_pokemon)
-                break
-            else:
-                print('다시 선택하십쇼.')
                 input('')
                 continue
 
@@ -229,4 +230,5 @@ class pokemon:
 
 startpokemon=pokemon()
 startpokemon.start()
+
 

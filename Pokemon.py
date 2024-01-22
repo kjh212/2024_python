@@ -230,5 +230,3 @@ class pokemon:
 
 startpokemon=pokemon()
 startpokemon.start()
-
-

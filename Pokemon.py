@@ -146,6 +146,10 @@ class pokemon:
         pokemon_who = ['피카츄', '파이리', '꼬부기']
         while True:
             num = int(input('1:피카츄\n2:파이리\n3:꼬부기\n-->'))
+            if num!=1 and num!=2 and num!=3:
+                print('다시 선택하십쇼.')
+                input('')
+                continue
             print(f'{pokemon_who[num - 1]}을 선택하시겠습니까?')
             answer1 = input("1.예\n2.아니오\n-->")
             if answer1 == "1":
@@ -164,10 +168,10 @@ class pokemon:
                 print('다시 선택하십쇼.')
 
     def activity(self,your_pokemon):
-        monster = [Pikachu, Charmander, Squirtle, watermon, firemon, elecmon]
-        monster_choice = random.choice(monster)
-        enemy = monster_choice()
         while True:
+            monster = [Pikachu, Charmander, Squirtle, watermon, firemon, elecmon]
+            monster_choice = random.choice(monster)
+            enemy = monster_choice()
             active1 = int(input('1:풀숲으로 들어간다.\n2.게임 종료.\n-->'))
             if active1 == 1:
                 print(f'야생의 {enemy.name}이(가) 나타났다.')

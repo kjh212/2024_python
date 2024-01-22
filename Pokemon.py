@@ -17,12 +17,12 @@ class Pikachu(Pokemon):
         print('다음 중 선택하세요.(enter)')
         input('')
         while enemy.HP > 0:
-            attackinput = int(input('1.몸통박치기\n2.백만볼트\n3.도망치기\n-->'))
-            if attackinput==1:
+            attackinput = input('1.몸통박치기\n2.백만볼트\n3.도망치기\n-->')
+            if attackinput=='1':
                 enemy.HP=enemy.HP-2
                 print('효과는 괜찮았다.(enter)')
                 input('')
-            elif attackinput==2:
+            elif attackinput=='2':
                 if enemy.attribute=='물속성':
                     enemy.HP=enemy.HP-3
                     print('효과는 굉장했다.(enter)')
@@ -33,7 +33,7 @@ class Pikachu(Pokemon):
                     enemy.HP=enemy.HP-1
                     print('효과는 미미했다.(enter)')
                 input('')
-            elif attackinput==3:
+            elif attackinput=='3':
                 print('상대가 너무 강하다..도망을 선택했다.(enter)')
                 input('')
                 break
@@ -63,12 +63,12 @@ class Charmander(Pokemon):
         print('다음 중 선택하세요.(enter)')
         input('')
         while enemy.HP > 0:
-            attackinput = int(input('1.머리박치기\n2.불대포\n3.도망치기\n-->'))
-            if attackinput == 1:
+            attackinput = input('1.머리박치기\n2.불대포\n3.도망치기\n-->')
+            if attackinput == '1':
                 enemy.HP = enemy.HP - 2
                 print('효과는 괜찮았다.(enter)')
                 input('')
-            elif attackinput == 2:
+            elif attackinput == '2':
                 if enemy.attribute == '전기속성':
                     enemy.HP = enemy.HP - 3
                     print('효과는 굉장했다.(enter)')
@@ -79,7 +79,7 @@ class Charmander(Pokemon):
                     enemy.HP = enemy.HP - 1
                     print('효과는 미미했다.(enter)')
                 input('')
-            elif attackinput == 3:
+            elif attackinput == '3':
                 print('상대가 너무 강하다..도망을 선택했다. (enter)')
                 input('')
                 break
@@ -104,12 +104,12 @@ class Squirtle(Pokemon):
         print('다음 중 선택하세요.(enter)')
         input('')
         while enemy.HP > 0:
-            attackinput = int(input('1.머리박치기\n2.물대포\n3.도망치기\n-->'))
-            if attackinput == 1:
+            attackinput = input('1.머리박치기\n2.물대포\n3.도망치기\n-->')
+            if attackinput == '1':
                 enemy.HP = enemy.HP - 2
                 print('효과는 괜찮았다. (enter)')
                 input('')
-            elif attackinput == 2:
+            elif attackinput == '2':
                 if enemy.attribute == '불속성':
                     enemy.HP = enemy.HP - 3
                     print('효과는 굉장했다.(enter)')
@@ -120,7 +120,7 @@ class Squirtle(Pokemon):
                     enemy.HP = enemy.HP - 1
                     print('효과는 미미했다.(enter)')
                 input('')
-            elif attackinput == 3:
+            elif attackinput == '3':
                 print('상대가 너무 강하다..도망을 선택했다.(enter)')
                 input('')
                 break
@@ -160,23 +160,24 @@ class pokemon:
     def choice(self):
         pokemon_who = ['피카츄', '파이리', '꼬부기']
         while True:
-            num = int(input('1:피카츄\n2:파이리\n3:꼬부기\n-->'))
-            if num!=1 and num!=2 and num!=3:
+            num = input('1:피카츄\n2:파이리\n3:꼬부기\n-->')
+            int2=int(num)
+            if num!='1' and num!='2' and num!='3':
                 print('다시 선택하십쇼.(enter)')
                 input('')
                 continue
-            print(f'{pokemon_who[num - 1]}을 선택하시겠습니까?')
+            print(f'{pokemon_who[int2-1]}을 선택하시겠습니까?')
             answer1 = input("1.예\n2.아니오\n-->")
             if answer1 == "1":
-                print(f'{pokemon_who[num - 1]}를 선택하셨습니다.(enter)')
-                if num==1:
+                print(f'{pokemon_who[int2-1]}를 선택하셨습니다.(enter)')
+                if num=='1':
                     your_pokemon=Pikachu()
-                elif num==2:
+                elif num=='2':
                     your_pokemon=Charmander()
-                elif num==3:
+                elif num=='3':
                     your_pokemon=Squirtle()
                 input('')
-                print(f'{pokemon_who[num - 1]}와 함께 무엇을 하실 것인가요?')
+                print(f'{pokemon_who[int2-1]}와 함께 무엇을 하실 것인가요?')
                 startpokemon.activity(your_pokemon)
                 break
             else:
@@ -189,16 +190,16 @@ class pokemon:
             monster = [Pikachu, Charmander, Squirtle, watermon, firemon, elecmon]
             monster_choice = random.choice(monster)
             enemy = monster_choice()
-            active1 = int(input('1:풀숲으로 들어간다.\n2.게임 종료.\n-->'))
-            if active1 == 1:
+            active1 = input('1:풀숲으로 들어간다.\n2.게임 종료.\n-->')
+            if active1 == '1':
                 print(f'야생의 {enemy.name}이(가) 나타났다.(enter)')
                 input('')
                 while True:
-                    b=int(input('1.싸운다.\n2.도망간다.\n-->'))
-                    if b==1:
+                    b=input('1.싸운다.\n2.도망간다.\n-->')
+                    if b=='1':
                         your_pokemon.attack(enemy)
                         break
-                    elif b==2:
+                    elif b=='2':
                         print('상대가 너무 강하다..도망을 선택했다.(enter)')
                         input('')
                         break
@@ -207,12 +208,12 @@ class pokemon:
                         input('')
                         continue
 
-            elif active1 == 2:
+            elif active1 == '2':
                 print('게임을 종료하시겠습니까?')
-                a=int(input('1.예\n2.아니오.\n-->'))
-                if a == 1:
+                a=input('1.예\n2.아니오.\n-->')
+                if a == '1':
                     sys.exit()
-                if a == 2:
+                if a == '2':
                     continue
                 else :
                     print('다시 입력하세요(enter)')
